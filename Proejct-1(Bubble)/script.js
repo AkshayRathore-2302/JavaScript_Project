@@ -42,6 +42,13 @@ function getNewHit(){
     document.querySelector('#hitval').textContent = hitrn;
 }
 
+function resetScore(){
+    score =0;
+    makebubble();
+    getNewHit();
+
+}
+
 document.querySelector('#pbtm').addEventListener("click",function(dets){
     var clickednum = Number(dets.target.textContent);
     if(clickednum == hitrn){
@@ -49,13 +56,16 @@ document.querySelector('#pbtm').addEventListener("click",function(dets){
         makebubble();
         getNewHit();
     }
-    else{
-        if(score >0){
 
-            decreasescore();
-            makebubble();
-            getNewHit();
-        }
+
+    else{
+        decreasescore();
+        makebubble();
+        getNewHit();
+        // if(score >0){
+
+           
+        // }
       
     }
 });
